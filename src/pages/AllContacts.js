@@ -18,7 +18,7 @@ const AllContacts = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          "https://cms-dashboard-kdza.onrender.com/api/mycontacts",
+          "https://cms-server-zcqp.onrender.com/api/mycontacts",
           {
             method: "GET",
             headers: {Authorization: `Bearer ${localStorage.getItem("token")}`},

@@ -18,13 +18,10 @@ export const AuthContextProvider = ({children}) => {
   // check if the user logged in
   const checkUserLoggedIn = async () => {
     try {
-      const res = await fetch(
-        "https://cms-dashboard-kdza.onrender.com/api/me",
-        {
-          method: "GET",
-          headers: {Authorization: `Bearer ${localStorage.getItem("token")}`},
-        }
-      );
+      const res = await fetch("https://cms-server-zcqp.onrender.com/api/me", {
+        method: "GET",
+        headers: {Authorization: `Bearer ${localStorage.getItem("token")}`},
+      });
       const result = await res.json();
       if (!result.error) {
         if (
@@ -50,7 +47,7 @@ export const AuthContextProvider = ({children}) => {
   const loginUser = async (userData) => {
     try {
       const res = await fetch(
-        "https://cms-dashboard-kdza.onrender.com/api/login",
+        "https://cms-server-zcqp.onrender.com/api/login",
         {
           method: "POST",
           headers: {"Content-Type": "application/json"},
@@ -76,7 +73,7 @@ export const AuthContextProvider = ({children}) => {
   const registerUser = async (userData) => {
     try {
       const res = await fetch(
-        "https://cms-dashboard-kdza.onrender.com/api/register",
+        "https://cms-server-zcqp.onrender.com/api/register",
         {
           method: "POST",
           headers: {"Content-Type": "application/json"},

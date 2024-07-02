@@ -29,7 +29,7 @@ const EditContact = () => {
     event.preventDefault();
 
     const res = await fetch(
-      `https://cms-dashboard-kdza.onrender.com/api/contact`,
+      `https://cms-server-zcqp.onrender.com/api/contact`,
       {
         method: "PUT",
         headers: {
